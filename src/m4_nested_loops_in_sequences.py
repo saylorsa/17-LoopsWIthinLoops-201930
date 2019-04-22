@@ -176,9 +176,14 @@ def sum_numbers(seq_seq):
                     and each item in the subsequences is a number.
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
+    total = 0
+    for j in range(len(seq_seq)):
+        for k in range(len(seq_seq[j])):
+            total = total + seq_seq[j][k]
+    return total
 
 
 def run_test_print_characters():
