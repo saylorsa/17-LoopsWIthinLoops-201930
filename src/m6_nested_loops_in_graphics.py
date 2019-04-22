@@ -91,6 +91,7 @@ def draw_L(window, circle, r, c):
 
     x = startx
     y = starty
+    #Stem
     for j in range(r):
         for k in range(3):
             stem = rg.Circle(rg.Point(x,y),rad)
@@ -101,6 +102,7 @@ def draw_L(window, circle, r, c):
             x = x + (2 * rad)
         y = y + (2 * rad)
         x = startx
+    #Corner
     for j in range(3):
         for k in range(3):
             stem = rg.Circle(rg.Point(x, y), rad)
@@ -113,6 +115,7 @@ def draw_L(window, circle, r, c):
         x = startx
     x = (2 * 3 * rad) + startx
     y = (2 * r * rad) + starty
+    #Leg
     for j in range(3):
         for k in range(c):
             stem = rg.Circle(rg.Point(x, y), rad)
@@ -162,9 +165,23 @@ def draw_wall_on_right(rectangle, n, window):
     and n is a small, positive integer.
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # -------------------------------------------------------------------------
+    start = rectangle.get_center()
+    width = rectangle.get_width()
+    height = rectangle.get_height()
+
+    x = start.x
+    y = start.y
+    for j in range(n):
+        for k in range(n-j):
+            rec = rg.Rectangle(rg.Point(x - (width/2), y - (height/2)), rg.Point(x + (width/2), y + (height/2)))
+            rec.attach_to(window)
+            window.render(0.1)
+            y = y + height
+        x = x - width
+        y = start.y + ((j+1)*height)
 
 
 # -----------------------------------------------------------------------------
