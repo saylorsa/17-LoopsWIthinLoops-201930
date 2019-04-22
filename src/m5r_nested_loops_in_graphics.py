@@ -56,7 +56,7 @@ def nested_loops_in_graphics_example():
     window.close_on_mouse_click()
 
 # -----------------------------------------------------------------------------
-# TODO: 2.
+# DONE: 2.
 #  *** Unless your instructor directs you otherwise,
 #      watch the video
 #          nested_loops_in_GRAPHICS.mp4
@@ -109,7 +109,7 @@ def rectangle_of_circles(window, circle, m, n):
 
 
 # -----------------------------------------------------------------------------
-# TODO: 3.
+# DONE: 3.
 #  *** Unless your instructor directs you otherwise,
 #      watch the video
 #          nested_loops_in_GRAPHICS.mp4
