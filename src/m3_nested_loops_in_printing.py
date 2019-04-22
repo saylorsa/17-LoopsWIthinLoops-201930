@@ -302,7 +302,7 @@ def triangle_all_numbers_in_each_row(r):
     Precondition:  r is a non-negative integer.
     """
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -311,6 +311,10 @@ def triangle_all_numbers_in_each_row(r):
     #   would defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
 
+    for j in range(r):
+        for k in range(j+1):
+            print(k+1, end='')
+        print()
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
